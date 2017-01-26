@@ -102,8 +102,6 @@ class MainController
         $to = 'MAIL_TO';
         $subject = 'User to be approved';
 
-        $user_id = count($users_to_be_moderated) - 1;
-
         $generated_link = 'http://localhost/apply?email='.$email."&hash=".$hash;
 
         mail($to, $subject, json_encode($users)." LINK: $generated_link");
