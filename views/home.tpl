@@ -7,21 +7,17 @@
     <table class="table table-striped table-bordered">
         <thead>
             <th>User name</th>
+            <th>Email</th>
             <th>Register date</th>
         </thead>
         <tbody>
+        {foreach $users as $user}
         <tr>
-            <td>Test name</td>
-            <td>11/11/2011</td>
+            <td>{$user['name']}</td>
+            <td>{$user['email']}</td>
+            <td>{$user['created_at']}</td>
         </tr>
-        <tr>
-            <td>Test name</td>
-            <td>11/11/2011</td>
-        </tr>
-        <tr>
-            <td>Test name</td>
-            <td>11/11/2011</td>
-        </tr>
+        {/foreach}
         </tbody>
     </table>
 

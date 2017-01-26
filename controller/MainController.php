@@ -22,6 +22,11 @@ class MainController
      */
     public function home()
     {
+        $users = [];
+        if(file_exists('../storage/audience/registered/list.json')) {
+            $users = json_decode(file_get_contents('../storage/audience/registered/list.json'), true);
+        }
+        $this->smarty->assign('users', $users);
         $this->showHTML();
     }
 
@@ -157,7 +162,7 @@ class MainController
         file_put_contents('../storage/audience/moderation/list.json', json_encode($users));
 
         $list = json_decode(file_get_contents('../storage/audience/registered/list.json'), true);
-        $list[] = ['user' => $name, 'email' => $email, 'time' => date('d-m-Y H:i:s', time())];
+        $list[] = ['name' => $name, 'email' => $email, 'created_at' => date('d-m-Y H:i:s', time())];
         file_put_contents('../storage/audience/registered/list.json', json_encode($list));
 
         $this->showHTML();
