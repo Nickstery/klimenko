@@ -14,7 +14,7 @@ $smarty->setTemplateDir('../views');
  * Gets the user's request parameters as string
  * http://localhost/test/123 => test/123
  */
-$request_uri = ltrim($_SERVER['REQUEST_URI'],"/");
+$request_uri = explode("?",ltrim($_SERVER['REQUEST_URI'],"/"))[0];
 
 
 /** strip string to array http://localhost/{route}/{action} => array(route,action)*/
@@ -40,4 +40,12 @@ if(!method_exists($controller, $route)) {
     $controller->not_found();
     return;
 }
-$controller->$route();
+
+
+
+
+if($route === 'image') {
+    $controller->$route($action);
+} else {
+    $controller->$route();
+}
