@@ -75,7 +75,7 @@ class MainController
     public function register()
     {
 
-        if(empty($_POST['name']) || empty($email) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) || $this->isUserExists(empty($_POST['email']))) {
+        if(empty($_POST['name']) || empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) || $this->isUserExists(empty($_POST['email']))) {
             $this->smarty->assign('message', 'ERROR. Empty data or user exists');
             $this->showHTML();
             return;
