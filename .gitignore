@@ -1,1 +1,4 @@
 .DS_Store
+public/templates_c
+storage/audience/moderation/list.json
+storage/audience/registered/list.json

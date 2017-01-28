@@ -2,7 +2,7 @@
 {block name=title}My Page Title{/block}
 {block name=body}
 
-    <h2>Home</h2>
+    <h2>Participants</h2>
 <a href="/registration"><button class="btn btn-success" style="margin-bottom: 12px"> Register </button></a>
     <table class="table table-striped table-bordered">
         <thead>

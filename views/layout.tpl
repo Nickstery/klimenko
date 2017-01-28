@@ -19,15 +19,15 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="#">
-                Some Branding
+            <a class="navbar-brand" href="/">
+                iMath conference
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="/home">Home</a></li>
+                <li><a href="/participants">Participants</a></li>
                 <li><a href="/announcements">Announcements</a></li>
                 <li><a href="/program" >Program</a></li>
                 <li><a href="/contacts" >Contacts</a></li>
