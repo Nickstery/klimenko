@@ -111,20 +111,18 @@ class MainController
     }
 
     /**
-     * Shows the local info page
-     */
-    public function info()
-    {
-        $this->showHTML();
-    }
-
-    /**
      * Shows 404 page if request is invalid
      */
     public function not_found()
     {
         $this->showHTML();
         return;
+    }
+
+    public function pdf()
+    {
+        header("Content-Type: application/pdf");
+        readfile('../storage/attacments/pdf.pdf');
     }
 
     public function image($file)

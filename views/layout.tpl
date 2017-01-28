@@ -33,8 +33,6 @@
                 <li><a href="/contacts" >Contacts</a></li>
                 <li><a href="/photos" >Photos</a></li>
                 <li><a href="/registration" >Registration</a></li>
-                <li><a href="/info" >Local info</a></li>
-
             </ul>
 
         </div>
