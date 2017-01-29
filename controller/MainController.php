@@ -18,9 +18,9 @@ class MainController
     }
 
     /**
-     * Shows the home page
+     * Shows the participants page
      */
-    public function home()
+    public function participants()
     {
         $users = [];
         if(file_exists('../storage/audience/registered/list.json')) {
@@ -122,7 +122,7 @@ class MainController
     public function pdf()
     {
         header("Content-Type: application/pdf");
-        readfile('../storage/attacments/pdf.pdf');
+        readfile('../storage/attachments/test.pdf');
     }
 
     public function image($file)
