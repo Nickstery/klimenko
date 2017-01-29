@@ -47,6 +47,14 @@ class MainController
     }
 
     /**
+     * Shows the abstracts page
+     */
+    public function abstracts()
+    {
+        $this->showHTML();
+    }
+
+    /**
      * Shows the contacts page
      */
     public function contacts()

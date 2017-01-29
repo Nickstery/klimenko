@@ -6,10 +6,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+ <h2 align="center">The 11-th International Algebraic Conference in Ukraine</br> dedicated to the 75th anniversary of V. V. Kirichenko</h2>
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
-
             <!-- Collapsed Hamburger -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
@@ -33,6 +33,7 @@
                 <li><a href="/contacts" >Contacts</a></li>
                 <li><a href="/photos" >Photos</a></li>
                 <li><a href="/registration" >Registration</a></li>
+                <li><a href="/abstracts" >Abstracts</a></li>
             </ul>
 
         </div>
