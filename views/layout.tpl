@@ -20,7 +20,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="/">
-                iMath conference
+                Home
             </a>
         </div>
 

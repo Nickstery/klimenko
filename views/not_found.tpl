@@ -34,7 +34,7 @@ We plan plenary talks (45 min), section talks (25 min) and short communications 
 Conference languages are English (preferable), Ukrainian and Russian.</br>
 The deadline for registration is 15 May, 2017, for abstract submission is 31 May, 2017.</br></br>
 
-Should you need any additional information, please do not hesitate to contact us: iacu2017@gmail.com</br>
+Should you need any additional information, please do not hesitate to contact us: <a href ="mailto:iacu2017@gmail.com">iacu2017@gmail.com</a>
 
 
 {/block}
