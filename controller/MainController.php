@@ -122,7 +122,7 @@ class MainController
     public function pdf()
     {
         header("Content-Type: application/pdf");
-        readfile('../storage/attachments/test.pdf');
+        readfile('../storage/attachments/announcement.pdf');
     }
 
     public function image($file)

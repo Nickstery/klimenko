@@ -3,7 +3,7 @@
 {block name=body}
     <div>
         <object data="http://35.162.114.150/pdf" type="application/pdf" style="width: 100%;height: 78%">
-            <a href="http://35.162.114.150/pdf">test.pdf</a>
+            <a href="http://35.162.114.150/pdf">announcement.pdf</a>
         </object>
     </div>
 {/block}
