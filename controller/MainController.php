@@ -90,12 +90,39 @@ class MainController
         }
 
         $name = $_POST['name'];
+        $last_name = $_POST['last_name'];
+        $city = $_POST['city'];
+        $country = $_POST['country'];
         $email = $_POST['email'];
+        $homepage = $_POST['homepage']; # TODO: check if exists
+        $affiliation = $_POST['affiliation'];
+        $affiliation_home = $_POST['affiliation_home'];
+        $status = $_POST['status'];
+        $talk = $_POST['talk'];
+        $title_of_talk = $_POST['title_of_talk']; # TODO: check if exists
+        $date_arrival = $_POST['date_arrival'];
+        $date_departure = $_POST['date_departure'];
+        $dinner = $_POST['dinner'];
+        $accom = $_POST['accom'];
+        
         $hash = md5($name.$email.time());
 
         $users = [
             'email' => $email,
             'name' => $name,
+            'last_name' => $last_name,
+            'city' => $city,
+            'country' => $country,
+            'homepage' => $homepage,
+            'affiliation' => $affiliation,
+            'affiliation_home' => $affiliation_home,
+            'status' => $status,
+            'talk' => $talk,
+            'title_of_talk' => $title_of_talk,
+            'date_arrival' => $date_arrival,
+            'date_departure' => $date_departure,
+            'dinner' => $dinner,
+            'accom' => $accom,
             'hash' => $hash
         ];
 
@@ -107,10 +134,10 @@ class MainController
 
         file_put_contents('../storage/audience/moderation/list.json', json_encode($users_to_be_moderated));
 
-        $to = 'MAIL_TO';
+        $to = 'ihorklim93@gmail.com';
         $subject = 'User to be approved';
 
-        $generated_link = 'http://localhost/apply?email='.$email."&hash=".$hash;
+        $generated_link = 'http://35.162.114.150/apply?email='.$email."&hash=".$hash;
 
         mail($to, $subject, json_encode($users)." LINK: $generated_link");
 
