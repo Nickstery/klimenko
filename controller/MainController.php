@@ -139,7 +139,24 @@ class MainController
 
         $generated_link = 'http://35.162.114.150/apply?email='.$email."&hash=".$hash;
 
-        mail($to, $subject, json_encode($users)." LINK: $generated_link");
+        $string_body = "Please approve following participant:\n\n" .
+                       "Name: ${users['name']}\n" .
+                       "Last Name: ${users['last_name']}\n" .
+                       "City: ${users['city']}\n" .
+                       "Country: ${users['country']}\n" .
+                       "Homepage: ${users['homepage']}\n" .
+                       "Affiliation: ${users['affiliation']}\n" .
+                       "Adress of Affiliation: ${users['affiliation_home']}\n" .
+                       "Status: ${users['status']}\n" .
+                       "Talk: ${users['talk']}\n" .
+                       "Title of the Talk: ${users['title_of_talk']}\n" .
+                       "Date of arrival: ${users['date_arrival']}\n" .
+                       "Date of departure: ${users['date_departure']}\n" .
+                       "Conference dinner: ${users['dinner']}\n" .
+                       "Accommodation: ${users['accom']}\n\n" .
+                       "Approval link: $generated_link";
+
+        mail($to, $subject, $string_body);
 
         $this->smarty->assign('message', 'Waiting for moderation');
         $this->showHTML();
@@ -193,7 +210,7 @@ class MainController
         file_put_contents('../storage/audience/moderation/list.json', json_encode($users));
 
         $list = json_decode(file_get_contents('../storage/audience/registered/list.json'), true);
-        $list[] = ['name' => $name, 'email' => $email, 'created_at' => date('d-m-Y H:i:s', time())];
+        $list[] = ['name' => $name, 'email' => $email, 'last_name' => $user['last_name'], 'affiliation' => $user['affiliation'], 'city' => $user['city'], 'country' => $user['country'], 'title_of_talk' => $user['title_of_talk'], 'created_at' => date('d-m-Y H:i:s', time())];
         file_put_contents('../storage/audience/registered/list.json', json_encode($list));
 
         $this->showHTML();
