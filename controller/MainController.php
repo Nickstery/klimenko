@@ -94,12 +94,12 @@ class MainController
         $city = $_POST['city'];
         $country = $_POST['country'];
         $email = $_POST['email'];
-        $homepage = $_POST['homepage']; # TODO: check if exists
+        $homepage = $_POST['homepage'];
         $affiliation = $_POST['affiliation'];
         $affiliation_home = $_POST['affiliation_home'];
         $status = $_POST['status'];
         $talk = $_POST['talk'];
-        $title_of_talk = $_POST['title_of_talk']; # TODO: check if exists
+        $title_of_talk = $_POST['title_of_talk'];
         $date_arrival = $_POST['date_arrival'];
         $date_departure = $_POST['date_departure'];
         $dinner = $_POST['dinner'];
@@ -156,7 +156,12 @@ class MainController
                        "Accommodation: ${users['accom']}\n\n" .
                        "Approval link: $generated_link";
 
-        mail($to, $subject, $string_body);
+        $headers = array("From: imath-conference@automail.com", 
+                         "X-Mailer: PHP/" . PHP_VERSION 
+                        ); 
+        $headers = implode("\r\n", $headers); 
+
+        mail($to, $subject, $string_body, $headers);
 
         $this->smarty->assign('message', 'Waiting for moderation');
         $this->showHTML();
