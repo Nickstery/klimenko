@@ -7,7 +7,7 @@
 </head>
 <body>
  <h2 align="center">11-th International Algebraic Conference in Ukraine</br> dedicated to the 75th anniversary of V. V. Kirichenko</h2>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top" style="border: 1px solid #d3e0e9 !important;">
     <div class="container">
         <div class="navbar-header">
             <!-- Collapsed Hamburger -->
