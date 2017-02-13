@@ -6,7 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
- <h2 align="center">The 11-th International Algebraic Conference in Ukraine</br> dedicated to the 75th anniversary of V. V. Kirichenko</h2>
+ <h2 align="center">11-th International Algebraic Conference in Ukraine</br> dedicated to the 75th anniversary of V. V. Kirichenko</h2>
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">

@@ -1,6 +1,7 @@
 {extends file="layout.tpl"}
 {block name=title}My Page Title{/block}
 {block name=body}
+</script>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
@@ -39,8 +40,14 @@
                         <input type="affiliation_home" class="form-control" id="affiliation_home" name="affiliation_home" placeholder="Address of Affiliation" required>
                     </div>
                     <div class="from-group">
+                        <script type="text/javascript">
+                            function showfield(name){
+                                if(name=='other_professional')document.getElementById('div1').innerHTML='<br/><b>Job Title:</b><span style="color:red"><font size="4">*</font></span> <input type="text" id="status" name="status" required />';
+                                else document.getElementById('div1').innerHTML='';
+                            }
+                        </script>
                         <label for="status">Status:<span style="color:red"><font size="4">*</font></span></label>
-                        <select type="status" class="form-control" id="status" name="status" placeholder="Status" required>
+                        <select type="status" class="form-control" id="status" name="status" onchange="showfield(this.options[this.selectedIndex].value)" placeholder="Status" required>
                             <option value="professor">Professor</option>
                             <option value="lecturer">Lecturer</option>
                             <option value="postdoctoral_researcher">Postdoctoral Researcher</option>
@@ -49,6 +56,7 @@
                             <option value="graduate_student">Graduate Student</option>
                             <option value="other_professional">Other Professional</option>
                         </select>
+                    <div id="div1"></div>
                     </div></br>
                     <div class="from-group">
                         <label for="talk">Do you want to give a talk? <span style="color:red"><font size="4">*</font></span></label>
@@ -63,11 +71,11 @@
                     </div>
                     <div class="form-group">
                         <label for="date_arrival">Date of arrival:<span style="color:red"><font size="4">*</font></span></label>
-                        <input type="date_arrival" class="form-control" id="date_arrival" name="date_arrival" placeholder="Date of arrival" required>
+                        <input type="date" class="form-control" id="date_arrival" name="date_arrival" placeholder="Date of arrival" required>
                     </div>
                     <div class="form-group">
                         <label for="date_departure">Date of departure:<span style="color:red"><font size="4">*</font></span></label>
-                        <input type="date_departure" class="form-control" id="date_departure" name="date_departure" placeholder="Date of departure" required>
+                        <input type="date" class="form-control" id="date_departure" name="date_departure" placeholder="Date of departure" required>
                     </div>
                     <div class="from-group">
                         <label for="dinner">Do you want to participate in the conference dinner? <span style="color:red"><font size="4">*</font></span></label>
