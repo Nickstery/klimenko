@@ -3,15 +3,12 @@
 {block name=body}
     <h2 align="center">Contacts</h2>
 <b>Address:</b></br>
-Faculty of Mechanics and Mathematics</br>
-Taras Shevchenko National University of Kyiv</br>
-Akademika Glushkova 4-E</br>
-Kyiv</br>
-Ukraine</br>
-03127</br></br>
-
-<b>GPS:</b></br>
-50.383515 30.469772</br></br>
+Department of Algebra and Topology</br>
+Institute of Mathematics</br>
+National Academy of Sciences of Ukraine</br>
+3, Tereshchenkivs'ka Str.</br>
+01004, Kyiv-4, Ukraine</br>
+P: +38 (044) 353-76-83</br></br>
 
 <b>E-mail:</b></br>
 <a href ="mailto:iacu2017@gmail.com">iacu2017@gmail.com</a></br></br>
