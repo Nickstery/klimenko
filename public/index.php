@@ -21,12 +21,11 @@ $config = json_decode(file_get_contents('config.json'),true);
  */
 
 $request_uri = explode("?",$_SERVER['REQUEST_URI'])[0];
-$request_uri = str_replace($config['replace_path'], '', $request_uri);
-
+$request_uri = str_replace($config['replace_path']."/", '', $request_uri);
 
 /** strip string to array http://localhost/{route}/{action} => array(route,action)*/
 $route_pieces = explode("/", $request_uri);
-
+$smarty->assign('base_path', $config['replace_path']);
 
 /**
  * Gets the route from the request http://localhost/{route}/{action} => route

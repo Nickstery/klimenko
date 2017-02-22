@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>{block name=title}Default Page Title{/block}</title>
-    <link rel="stylesheet" type="text/css" href="../public/css/app.css">
+    <link rel="stylesheet" type="text/css" href="{$base_path}/public/css/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
@@ -27,13 +27,13 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="/participants">Participants</a></li>
-                <li><a href="/announcements">Announcements</a></li>
-                <li><a href="/program" >Program</a></li>
-                <li><a href="/contacts" >Contacts</a></li>
-                <li><a href="/photos" >Photos</a></li>
-                <li><a href="/registration" >Registration</a></li>
-                <li><a href="/abstracts" >Abstracts</a></li>
+                <li><a href="{$base_path}/participants">Participants</a></li>
+                <li><a href="{$base_path}/announcements">Announcements</a></li>
+                <li><a href="{$base_path}/program" >Program</a></li>
+                <li><a href="{$base_path}/contacts" >Contacts</a></li>
+                <li><a href="{$base_path}/photos" >Photos</a></li>
+                <li><a href="{$base_path}/registration" >Registration</a></li>
+                <li><a href="{$base_path}/abstracts" >Abstracts</a></li>
             </ul>
 
         </div>
